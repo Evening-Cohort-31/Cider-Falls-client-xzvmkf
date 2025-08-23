@@ -1,0 +1,1 @@
+// Define function to create HTMl for destination cards 
