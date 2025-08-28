@@ -1,5 +1,5 @@
 // Define function to create HTMl for list of guests
-import { getGuests } from "./databaser.js";
+import { getGuests } from "./database.js";
 
 export const guestList = () => {
   const guests = getGuests();
