@@ -1,5 +1,7 @@
 // Define function to create HTMl for destination cards 
-import { getDestinations } from "./database.js";
+import { getDestinations, getGuests } from "./database.js";
+
+const guests = getGuests()
 
 //define the order I want my destinations to appear in
 const desiredDestinationOrder = [
@@ -36,7 +38,8 @@ export const destinationCards = () => {
         // Included optional elements (as commented HTML) for description and image that a can be added later for future improvements
         cardHTML += `
             <section class="destination-card">
-                <h2 class="destination-card__name">${destination.name}</h2>
+                <h2 class="destination-card__name"
+                data-type="destination">${destination.name}</h2>
                 <!-- Optional Additions for Future Enhancements -->
                 <!-- <p class="destination-card__description">${destination.description}</p> -->
                 <!--<img class="destination-card__image" src="${destination.image}" alt="${destination.name}"> -->
@@ -61,3 +64,24 @@ export const destinationCards = () => {
 
     return cardHTML;
 };
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+
+        if (itemClicked.dataset.type === "destination"){
+
+        const guestId = parseInt(itemClicked.dataset.id)
+
+        let guestCount = 0
+
+            for (const guest of guests) {
+                if (guest.destinationId === guestId) {}
+                    guestCount++ 
+            }
+         }
+        window.alert(`There are ${guestCount} guests in this destination`)
+
+    }
+)
