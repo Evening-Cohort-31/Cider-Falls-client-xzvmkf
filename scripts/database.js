@@ -44,7 +44,7 @@ destinations:[
     },
     {
         id: 3,
-        name: "Northwest Section",
+        name: "Lodge",
         activities: ["lodging", "parking", "information", "picnicking"]
     },
     {
@@ -54,7 +54,7 @@ destinations:[
     },
     {
         id: 5,
-        name: "Southern Section",
+        name: "Campgrounds",
         activities: ["information", "lodging", "parking"]
     },
     {   

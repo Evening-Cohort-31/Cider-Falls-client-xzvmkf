@@ -39,7 +39,8 @@ export const destinationCards = () => {
         cardHTML += `
             <section class="destination-card">
                 <h2 class="destination-card__name"
-                data-type="destination">${destination.name}</h2>
+                data-type="destination"
+                data-id="$${destination.id}>${destination.name}</h2>
                 <!-- Optional Additions for Future Enhancements -->
                 <!-- <p class="destination-card__description">${destination.description}</p> -->
                 <!--<img class="destination-card__image" src="${destination.image}" alt="${destination.name}"> -->
@@ -50,7 +51,7 @@ export const destinationCards = () => {
         for (const activity of destination.activities) {
             cardHTML += `
                     <li>
-                        ${activity.name}
+                        ${activity}
                     </li>
             `;
         }
