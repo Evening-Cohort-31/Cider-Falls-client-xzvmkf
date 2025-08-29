@@ -65,7 +65,6 @@ destinations:[
 ]
 }
 
-
 export const getGuests = () => {
         return structuredClone(database.guests)}
 export const getDestinations = () => {
