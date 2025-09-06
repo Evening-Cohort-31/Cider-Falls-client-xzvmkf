@@ -1,0 +1,34 @@
+/* styling css */
+
+/* Destination Card Styles */
+.destination-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.destination-card__description {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.destination-card__activities {
+  list-style: none;
+  padding: 0;
+}
+
+.destination-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
