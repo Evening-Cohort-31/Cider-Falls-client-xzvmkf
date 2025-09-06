@@ -19,7 +19,22 @@ export const getServicesHTML = () => {
 };
 
 // create an event listener that when a service in that list is clicked on, displays which areas of the park that service is offered in.
+document.addEventListener("click", (clickEvent) => {
+  const itemClicked = clickEvent.target;
+  const destinations = getDestinations();
+  if (itemClicked.dataset.type === "service") {
+    const serviceId = parseInt(itemClicked.dataset.id);
+    const serviceName = itemClicked.innerHTML;
+    let destinationArray = [];
+    for (const destination of destinations) {
+      if (destination.activitiesId.includes(serviceId)) {
+        destinationArray.push(destination.name);
+      }
+    }
 
+    window.alert(`${serviceName} is available in ${destinationArray}`);
+  }
+});
 // create click event listener
 
 // make a variable that captures click target html element. this will let us access the dataset within each html element list item.
